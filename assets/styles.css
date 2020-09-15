@@ -4,3 +4,43 @@
     --blue: #049DD9;
     --green: #7AA61C;
 }
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+}
+
+a {
+    text-decoration: none;
+}
+
+ul {
+    list-style-type: none;
+}
+
+header nav div.logo {
+    background-image: url(../assets/images/logo.jpg);
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    padding: 4.25%;
+    position: absolute;
+    left: 5%;
+    top: -2vw;
+}
+
+header nav {
+    display: flex;
+    padding: 3vw;
+    background-color: #fff;
+}
+
+video {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
