@@ -3,14 +3,23 @@
 :root {
     --blue: #049DD9;
     --green: #7AA61C;
+    --white: #f5f5f5;
 }
 
 * {
     box-sizing: border-box;
+    margin: 0;
+    padding: 0;
 }
+
+html {
+    font-size: 62.5%;
+}  
 
 body {
     font-family: 'Roboto', sans-serif;
+    background-color: var(--white);
+    overflow-x: hidden;
 }
 
 a {
@@ -22,27 +31,44 @@ ul {
 }
 
 header nav div.logo {
-    background-image: url(../assets/images/logo.jpg);
+    background-image: url(../assets/images/logo_white.svg);
     background-position: center;
     background-size: contain;
     background-repeat: no-repeat;
-    padding: 4.25%;
+    padding: 3.25%;
     position: absolute;
     left: 5%;
-    top: -2vw;
+    top: -1vw;
 }
 
 header nav {
     display: flex;
-    padding: 3vw;
-    background-color: #fff;
+    padding: 2.3vw;
+    background-color: var(--blue);
+}
+
+nav {
+    position: fixed;
+    width: 100vw;
+    z-index: 100;
+}
+
+.hero-banner {
+    background: linear-gradient(#049DD9, var(--white));
+    position: relative;
+    top: 4vw;
 }
 
 .video-container {
+    display: flex;
+    align-content: center;
+    justify-content: center;
+}
+
+video {
     position: absolute;
     top: 50%;
     left: 50%;
-    transform: translate(-50%, -50%);
 }
 
 .video-js .vjs-big-play-button {
@@ -50,6 +76,121 @@ header nav {
 	top: 50%;
 	left: 50%;
 	transform: translate(-50%, -50%);
+}
+
+h1 {
+    font-size: 4rem;
+    padding-bottom: 2rem;
+    text-align: center;
+    color: var(--white);
+}
+
+h2 {
+    font-size: 2.8rem;
+    line-height: 10rem;
+}
+
+p {
+    font-size: 1.6rem;
+    line-height: 2.4rem;
+    font-weight: normal;
+}
+
+.content-wrapper {
+    display: flex;
+    padding: 0 5rem;
+    align-items: center;
+}
+
+.flipped {
+    flex-direction: row-reverse;
+}
+
+.text {
+    position: relative;
+}
+
+.flipped>.text {
+    right: -5vw;
+}
+
+.regular>.text {
+    left: -5vw;
+}
+
+.flipped>.text h2 {
+    color: var(--blue);
+}
+
+.regular>.text h2 {
+    color: var(--green);
+}
+
+/*Illustrations*/
+
+.illustration {
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    padding: 26.25%;
+    position: relative;
+}
+
+.flipped>.illustration {
+    right: -10vw;
+}
+
+.regular>.illustration {
+    left: -10vw;
+}
+
+.one {
+    background-image: url(../assets/images/illustrations/1.png);
+}
+
+.two {
+    background-image: url(../assets/images/illustrations/4.png);
+}
+
+.three {
+    background-image: url(../assets/images/illustrations/3.png);
+}
+
+.four {
+    background-image: url(../assets/images/illustrations/2.png);
+}
+
+.five  {
+    background-image: url(../assets/images/illustrations/5.png);
+}
+
+/*Footer*/
+
+footer {
+    background-color: var(--green);
+    color: var(--white);
+    font-weight: bold;
+    font-size: 1.4rem;
+    text-align: center;
+    width: 100%;
+    height: fit-content;
+    padding: 1rem;
+}
+
+footer>a {
+    border: 2px solid var(--white);
+    background-color: var(--white);
+    border-radius: 30px;
+    color: var(--green);
+    font-size: 2rem;
+    padding: 2rem;
+    margin: 2rem;
+    display: inline-block;
+}
+
+footer>a:hover {
+    transform: scale(1.1);
+    box-shadow: rgba(15, 15, 15, 0.26) 1px 1px 30px;
 }
 
 /* Hotspots */
