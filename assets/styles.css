@@ -38,9 +38,44 @@ header nav {
     background-color: #fff;
 }
 
-video {
+.video-container {
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
+}
+
+.video-js .vjs-big-play-button {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+}
+
+/* Hotspots */
+
+@keyframes scale {
+  from {
+    width: 20px;
+    height: 20px;
+  }
+  to {
+    width: 70px;
+    height: 70px;
+  }
+}
+
+.videoHotspotsParent {
+    position: relative;
+}
+
+div>.hotspot {
+    box-sizing: border-box;
+    position: absolute;
+    z-index: 1;
+    cursor: pointer;
+}
+
+video:focus {
+    outline: none;
 }
