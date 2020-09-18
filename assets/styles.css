@@ -213,7 +213,7 @@ footer>a:hover {
 div>.hotspot {
     box-sizing: border-box;
     position: absolute;
-    z-index: 1;
+    z-index: 10;
     cursor: pointer;
 }
 
