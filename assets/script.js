@@ -4,7 +4,7 @@ let options = {
     "autoplay": false,
     "preload": "auto",
     "muted": false
-}
+};
 
 videojs('video', options);
 
@@ -43,7 +43,7 @@ let video = {
                     }
                 });
                 elmVideo.addEventListener('pause', (event) => {         // add eventlistener stop/pause on videos
-                    if (video.hotspots.running) {        // if engine is running
+                    if (video.hotspots.running) {       // if engine is running
                         let videoPlaying = false;       // check if all videos are stopped/paused
                         elmsVideo.forEach((elmVideo) => {
                             if (!elmVideo.paused) {
@@ -79,11 +79,10 @@ let video = {
                 if (hotspot.active) {
                     // get video element for hotspot
                     const video = document.querySelector(`#${hotspot.videoId}>video`);
-                    
                     if (video) {
                         const now = video.currentTime;
                         const elmHotspotCheck = document.querySelector(`#hotspotId${index}`);
-                        
+
 
                         if (hotspot.markIn > now || hotspot.markOut <= now) {
                             // check to see if element with the current hotspot id exists
@@ -133,7 +132,7 @@ let video = {
                         }
                     }
                 }
-            });   
+            });
         },
         remove: () => {
             // kill all hotspot related functions, json feed and DOM elements - use  video.hotspots.remove()  to do this
@@ -141,8 +140,9 @@ let video = {
             video.hotspots.off();                                               // turn off engine
             const elmsHotspots = document.querySelectorAll('a.hotspot');        // find all hotspot DOM elements
             elmsHotspots.forEach((elmHotspot) => {                              // loop through hotspots
-                elmHotspot.parentElement.removeChild(elmHotspot);               // remove current hotspot
+                elmHotspot.parentElement.removeChild(elmHotspot);              // remove current hotspot
             });
+            video.play();
             delete video;                                                       // remove the variable from memory
             delete hotspots;                                                    // remove the variable from memory
         }
@@ -151,50 +151,166 @@ let video = {
 }
 // end
 
+let closeBtn;
 
 const hotspots = [
     {
         active: true,
         videoId: "video",
-        markIn: 20.4,
-        markOut: 21,
-        sizeX: 30,
-        sizeY: 32,
-        posX: 52,
-        posY: 6,
+        markIn: 7,
+        markOut: 7.1,
+        sizeX: 5,
+        sizeY: 5,
+        posX: 20,
+        posY: 20,
         ui: {
             type: "box",
             image: "",
-            style: "border: none; background-color: var(--blue); oppacity: 50%; padding: .3rem;"
+            style: "border-radius: 50%; background-color: var(--blue); padding: 2rem;",
         },
         hotspot: {
-            type: "link",
-            url: "",
-            target: "_blank"
+            type: "function",
+            onHover: true,
+            func: () => {
+                document.getElementById("hotspotId0").innerHTML = hotspotInfo.hotspot1;
+                document.querySelector('#hotspotOffBtn').addEventListener('click', ()=>{
+                    videojs('video', options).play();
+                })
+            }
         }
     },
     {
         active: true,
         videoId: "video",
-        markIn: 25,
-        markOut: 27,
-        sizeX: 30,
-        sizeY: 32,
-        posX: 52,
-        posY: 6,
+        markIn: 10,
+        markOut: 10.1,
+        sizeX: 5,
+        sizeY: 5,
+        posX: 20,
+        posY: 20,
         ui: {
             type: "box",
             image: "",
-            style: `border: none; background-color: #fff; color: #000;`,
-            text: "jikjkhukhkuhk"
+            style: "border-radius: 50%; background-color: var(--blue); padding: 2rem;",
         },
         hotspot: {
-            type: "link",
-            url: "",
-            target: "_blank"
+            type: "function",
+            onHover: true,
+            func: () => {
+                document.getElementById("hotspotId1").innerHTML = hotspotInfo.hotspot2;
+                document.querySelector('#hotspotOffBtn').addEventListener('click', ()=>{
+                    videojs('video', options).play();
+                })
+            }
+        }
+    },
+    {
+        active: true,
+        videoId: "video",
+        markIn: 12,
+        markOut: 12.1,
+        sizeX: 5,
+        sizeY: 5,
+        posX: 20,
+        posY: 20,
+        ui: {
+            type: "box",
+            image: "",
+            style: "border-radius: 50%; background-color: var(--blue); padding: 2rem;",
+        },
+        hotspot: {
+            type: "function",
+            onHover: true,
+            func: () => {
+                document.getElementById("hotspotId2").innerHTML = hotspotInfo.hotspot3;
+                document.querySelector('#hotspotOffBtn').addEventListener('click', ()=>{
+                    videojs('video', options).play();
+                })
+            }
+        }
+    },
+    {
+        active: true,
+        videoId: "video",
+        markIn: 14,
+        markOut: 14.1,
+        sizeX: 5,
+        sizeY: 5,
+        posX: 20,
+        posY: 20,
+        ui: {
+            type: "box",
+            image: "",
+            style: "border-radius: 50%; background-color: var(--blue); padding: 2rem;",
+        },
+        hotspot: {
+            type: "function",
+            onHover: true,
+            func: () => {
+                document.getElementById("hotspotId3").innerHTML = hotspotInfo.hotspot4;
+                document.querySelector('#hotspotOffBtn').addEventListener('click', ()=>{
+                    videojs('video', options).play();
+                })
+            }
+        }
+    },
+    {
+        active: true,
+        videoId: "video",
+        markIn: 18,
+        markOut: 18.1,
+        sizeX: 5,
+        sizeY: 5,
+        posX: 20,
+        posY: 20,
+        ui: {
+            type: "box",
+            image: "",
+            style: "border-radius: 50%; background-color: var(--blue); padding: 2rem;",
+        },
+        hotspot: {
+            type: "function",
+            onHover: true,
+            func: () => {
+                document.getElementById("hotspotId4").innerHTML = hotspotInfo.hotspot5;
+                document.querySelector('#hotspotOffBtn').addEventListener('click', ()=>{
+                    videojs('video', options).play();
+                })
+            }
         }
     }
 ];
 
 video.hotspots.init();
+
+let hotspotInfo = {
+    "hotspot1" : `<div class="text-box">
+    <p>Bottles and cans with a deposit mark are disposable packaging that can be recycled, melted and turned into new bottles and cans.<br>
+    <br>
+    <b>Pant A = DKK 1.00</b><br>
+    <b>Pant B = DKK 1.50</b><br>
+    <b>Pant C = DKK 3.00</b></p>
+    <button id="hotspotOffBtn">Okay</button> 
+    </div>`,
+
+    "hotspot2" : `<div class="text-box"><p>
+    Danes excel at returning their empty bottles and cans. 92% of all bottles and cans return to the system so that the aluminum, plastic and glass can be melted and turned into new bottles and cans. </p>
+    <button id="hotspotOffBtn">Okay</button> 
+   </div>`,
+
+    "hotspot3"  : `<div class="text-box"><p>
+    Nearly 3000 stores throughout Denmark have reverse vending machines, where you can return all deposit-marked bottles and cans.</p>
+    <button id="hotspotOffBtn">Okay</button> 
+    </div>`,
+    
+    "hotspot4"  : `<div class="text-box"><p>
+    After putting your bottles in the machine, you get an option to either get the money in a shape of a receipt, or to donate it. </p>
+    <button id="hotspotOffBtn">Okay</button>  
+   </div>`,
+
+    "hotspot5" : `<div class="text-box"><p>
+    The receipt can be used as means of payment or exchanged for money in the store which holds the specific reverse vending machine you used.  </p>
+    <button id="hotspotOffBtn">Okay</button> 
+  </div>`
+}
 

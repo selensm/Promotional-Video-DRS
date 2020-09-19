@@ -14,7 +14,7 @@
 
 html {
     font-size: 62.5%;
-}  
+}
 
 body {
     font-family: 'Roboto', sans-serif;
@@ -72,10 +72,10 @@ video {
 }
 
 .video-js .vjs-big-play-button {
-	position: absolute;
-	top: 50%;
-	left: 50%;
-	transform: translate(-50%, -50%);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
 }
 
 h1 {
@@ -160,7 +160,7 @@ p {
     background-image: url(../assets/images/illustrations/2.png);
 }
 
-.five  {
+.five {
     background-image: url(../assets/images/illustrations/5.png);
 }
 
@@ -196,14 +196,15 @@ footer>a:hover {
 /* Hotspots */
 
 @keyframes scale {
-  from {
-    width: 20px;
-    height: 20px;
-  }
-  to {
-    width: 70px;
-    height: 70px;
-  }
+    from {
+        width: 20px;
+        height: 20px;
+    }
+
+    to {
+        width: 70px;
+        height: 70px;
+    }
 }
 
 .videoHotspotsParent {
@@ -217,6 +218,50 @@ div>.hotspot {
     cursor: pointer;
 }
 
+div>.hotspot::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    background-color: var(--blue);
+    opacity: 0.5;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+    animation-name: scale;
+    animation-iteration-count: infinite;
+    animation-duration: 1s;
+    z-index: 10
+}
+
 video:focus {
     outline: none;
 }
+
+.text-box {
+    width: 30vw;
+    height: fit-content;
+    padding: 2.4rem;
+    background-color: #049dd9ce;
+    border-radius: 3px;
+}
+
+.text-box>p {
+    color: #000;
+    font-size: 1.4rem;
+    line-height: 1.8rem;
+    padding-bottom: 1rem;
+}
+
+button#hotspotOffBtn {
+    background-color: var(--white);
+    color: #000;
+    font-size: 1.6rem;
+    padding: .7rem;
+    width: 8vw;
+    padding: 0.7rem;
+    border-radius: 2px;
+    cursor: pointer;
+}
+
