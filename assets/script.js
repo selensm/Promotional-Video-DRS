@@ -157,10 +157,12 @@ const hotspots = [
     {
         active: true,
         videoId: "video",
-        markIn: 7,
-        markOut: 7.1,
-        posX: 20,
-        posY: 20,
+        markIn: 18,
+        markOut: 18.1,
+        sizeX: 5,
+        sizeY: 5,
+        posX: 50,
+        posY: 38,
         ui: {
             type: "box",
             image: "",
@@ -177,98 +179,98 @@ const hotspots = [
             }
         }
     },
-    {
-        active: true,
-        videoId: "video",
-        markIn: 10,
-        markOut: 10.1,
-        posX: 20,
-        posY: 20,
-        ui: {
-            type: "box",
-            image: "",
-            style: "border-radius: 50%; background-color: var(--blue); padding: 2rem;",
-        },
-        hotspot: {
-            type: "function",
-            onHover: true,
-            func: () => {
-                document.getElementById("hotspotId1").innerHTML = hotspotInfo.hotspot2;
-                document.querySelector('#hotspotOffBtn').addEventListener('click', ()=>{
-                    videojs('video', options).play();
-                })
-            }
-        }
-    },
-    {
-        active: true,
-        videoId: "video",
-        markIn: 12,
-        markOut: 12.1,
-        posX: 20,
-        posY: 20,
-        ui: {
-            type: "box",
-            image: "",
-            style: "border-radius: 50%; background-color: var(--blue); padding: 2rem;",
-        },
-        hotspot: {
-            type: "function",
-            onHover: true,
-            func: () => {
-                document.getElementById("hotspotId2").innerHTML = hotspotInfo.hotspot3;
-                document.querySelector('#hotspotOffBtn').addEventListener('click', ()=>{
-                    videojs('video', options).play();
-                })
-            }
-        }
-    },
-    {
-        active: true,
-        videoId: "video",
-        markIn: 14,
-        markOut: 14.1,
-        posX: 20,
-        posY: 20,
-        ui: {
-            type: "box",
-            image: "",
-            style: "border-radius: 50%; background-color: var(--blue); padding: 2rem;",
-        },
-        hotspot: {
-            type: "function",
-            onHover: true,
-            func: () => {
-                document.getElementById("hotspotId3").innerHTML = hotspotInfo.hotspot4;
-                document.querySelector('#hotspotOffBtn').addEventListener('click', ()=>{
-                    videojs('video', options).play();
-                })
-            }
-        }
-    },
-    {
-        active: true,
-        videoId: "video",
-        markIn: 18,
-        markOut: 18.1,
-        posX: 20,
-        posY: 20,
-        ui: {
-            type: "box",
-            image: "",
-            style: "border-radius: 50%; background-color: var(--blue); padding: 2rem;",
-        },
-        hotspot: {
-            type: "function",
-            onHover: true,
-            func: () => {
-                document.getElementById("hotspotId4").innerHTML = hotspotInfo.hotspot5;
-                document.querySelector('#hotspotOffBtn').addEventListener('click', ()=>{
-                    videojs('video', options).play();
-                })
-            }
-        }
-    }
+    // {
+    //     active: true,
+    //     videoId: "video",
+    //     markIn: 10,
+    //     markOut: 10.1,
+    //     posX: 20,
+    //     posY: 20,
+    //     ui: {
+    //         type: "box",
+    //         image: "",
+    //         style: "border-radius: 50%; background-color: var(--blue); padding: 2rem;",
+    //     },
+    //     hotspot: {
+    //         type: "function",
+    //         onHover: true,
+    //         func: () => {
+    //             document.getElementById("hotspotId1").innerHTML = hotspotInfo.hotspot2;
+    //             document.querySelector('#hotspotOffBtn').addEventListener('click', ()=>{
+    //                 videojs('video', options).play();
+    //             })
+    //         }
+    //     }
+    // },
+    // {
+    //     active: true,
+    //     videoId: "video",
+    //     markIn: 12,
+    //     markOut: 12.1,
+    //     posX: 20,
+    //     posY: 20,
+    //     ui: {
+    //         type: "box",
+    //         image: "",
+    //         style: "border-radius: 50%; background-color: var(--blue); padding: 2rem;",
+    //     },
+    //     hotspot: {
+    //         type: "function",
+    //         onHover: true,
+    //         func: () => {
+    //             document.getElementById("hotspotId2").innerHTML = hotspotInfo.hotspot3;
+    //             document.querySelector('#hotspotOffBtn').addEventListener('click', ()=>{
+    //                 videojs('video', options).play();
+    //             })
+    //         }
+    //     }
+    // },
+    // {
+    //     active: true,
+    //     videoId: "video",
+    //     markIn: 14,
+    //     markOut: 14.1,
+    //     posX: 20,
+    //     posY: 20,
+    //     ui: {
+    //         type: "box",
+    //         image: "",
+    //         style: "border-radius: 50%; background-color: var(--blue); padding: 2rem;",
+    //     },
+    //     hotspot: {
+    //         type: "function",
+    //         onHover: true,
+    //         func: () => {
+    //             document.getElementById("hotspotId3").innerHTML = hotspotInfo.hotspot4;
+    //             document.querySelector('#hotspotOffBtn').addEventListener('click', ()=>{
+    //                 videojs('video', options).play();
+    //             })
+    //         }
+    //     }
+    // },
+    // {
+    //     active: true,
+    //     videoId: "video",
+    //     markIn: 18,
+    //     markOut: 18.1,
+    //     posX: 20,
+    //     posY: 20,
+    //     ui: {
+    //         type: "box",
+    //         image: "",
+    //         style: "border-radius: 50%; background-color: var(--blue); padding: 2rem;",
+    //     },
+    //     hotspot: {
+    //         type: "function",
+    //         onHover: true,
+    //         func: () => {
+    //             document.getElementById("hotspotId4").innerHTML = hotspotInfo.hotspot5;
+    //             document.querySelector('#hotspotOffBtn').addEventListener('click', ()=>{
+    //                 videojs('video', options).play();
+    //             })
+    //         }
+    //     }
+    // }
 ];
 
 video.hotspots.init();
