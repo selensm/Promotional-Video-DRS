@@ -159,8 +159,6 @@ const hotspots = [
         videoId: "video",
         markIn: 7,
         markOut: 7.1,
-        sizeX: 5,
-        sizeY: 5,
         posX: 20,
         posY: 20,
         ui: {
@@ -184,8 +182,6 @@ const hotspots = [
         videoId: "video",
         markIn: 10,
         markOut: 10.1,
-        sizeX: 5,
-        sizeY: 5,
         posX: 20,
         posY: 20,
         ui: {
@@ -209,8 +205,6 @@ const hotspots = [
         videoId: "video",
         markIn: 12,
         markOut: 12.1,
-        sizeX: 5,
-        sizeY: 5,
         posX: 20,
         posY: 20,
         ui: {
@@ -234,8 +228,6 @@ const hotspots = [
         videoId: "video",
         markIn: 14,
         markOut: 14.1,
-        sizeX: 5,
-        sizeY: 5,
         posX: 20,
         posY: 20,
         ui: {
@@ -259,8 +251,6 @@ const hotspots = [
         videoId: "video",
         markIn: 18,
         markOut: 18.1,
-        sizeX: 5,
-        sizeY: 5,
         posX: 20,
         posY: 20,
         ui: {
