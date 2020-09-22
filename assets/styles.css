@@ -35,7 +35,7 @@ header nav div.logo {
     background-position: center;
     background-size: contain;
     background-repeat: no-repeat;
-    padding: 3.25%;
+    padding: 2.75%;
     position: absolute;
     left: 5%;
     top: -1vw;
@@ -43,7 +43,7 @@ header nav div.logo {
 
 header nav {
     display: flex;
-    padding: 2.3vw;
+    padding: 1.6vw;
     background-color: var(--blue);
 }
 
@@ -55,14 +55,21 @@ nav {
 
 .hero-banner {
     background: linear-gradient(#049DD9, var(--white));
+}
+
+.title-can {
+    width: 5vw;
     position: relative;
-    top: 4vw;
+    top: 3vw;
+    transform: rotate(20deg);
+    padding: 1vw;
 }
 
 .video-container {
     display: flex;
     align-content: center;
     justify-content: center;
+    padding-top: .5vw;
 }
 
 video {
@@ -76,6 +83,10 @@ video {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
+}
+
+.vjs-tech { 
+    pointer-events: none;
 }
 
 h1 {
@@ -129,11 +140,9 @@ p {
 /*Illustrations*/
 
 .illustration {
-    background-position: center;
-    background-size: contain;
-    background-repeat: no-repeat;
-    padding: 26.25%;
+    width: 10vw;
     position: relative;
+    z-index: -1;
 }
 
 .flipped>.illustration {
@@ -142,26 +151,6 @@ p {
 
 .regular>.illustration {
     left: -10vw;
-}
-
-.one {
-    background-image: url(../assets/images/illustrations/1.png);
-}
-
-.two {
-    background-image: url(../assets/images/illustrations/4.png);
-}
-
-.three {
-    background-image: url(../assets/images/illustrations/3.png);
-}
-
-.four {
-    background-image: url(../assets/images/illustrations/2.png);
-}
-
-.five {
-    background-image: url(../assets/images/illustrations/5.png);
 }
 
 /*Footer*/
