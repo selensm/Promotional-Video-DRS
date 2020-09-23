@@ -151,8 +151,6 @@ let video = {
 }
 // end
 
-let closeBtn;
-
 const hotspots = [
     {
         active: true,
