@@ -111,7 +111,6 @@ p {
     display: flex;
     padding: 0 5rem;
     align-items: center;
-    margin-top: -12vw;
 }
 
 .flipped {
@@ -141,46 +140,18 @@ p {
 /*Illustrations*/
 
 .illustration {
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: contain;
+    width: 10vw;
     position: relative;
-    padding: 25vw;
     z-index: -1;
 }
 
 .flipped>.illustration {
-    right: -7vw;
+    right: -10vw;
 }
 
 .regular>.illustration {
-    left: -7vw;
+    left: -10vw;
 }
-
-#colaSection {
-    margin: 0;
-}
-
-.one {
-    background-image: url(../assets/images/illustrations/cola.svg);
-}
-
-.two {
-    background-image: url(../assets/images/illustrations/can.svg);
-}
-
-.three {
-    background-image: url(../assets/images/illustrations/machine.svg);
-}
-
-.four {
-    background-image: url(../assets/images/illustrations/money.svg);
-}
-
-.five {
-    background-image: url(../assets/images/illustrations/receipt.svg);
-}
-
 
 /*Footer*/
 
@@ -258,10 +229,10 @@ video:focus {
 }
 
 .text-box {
-    width: 23vw;
+    width: 30vw;
     height: fit-content;
     padding: 2.4rem;
-    background-color: var(--blue);
+    background-color: #049dd9ce;
     border-radius: 3px;
 }
 
