@@ -78,6 +78,15 @@ video {
     left: 50%;
 }
 
+.responsive-video {
+	width: 60%;
+	height: 0;
+}
+
+.video-ratio-16-9 {
+	padding-bottom: 35%;
+}
+
 .video-js .vjs-big-play-button {
     position: absolute;
     top: 50%;
@@ -283,3 +292,125 @@ button#hotspotOffBtn {
     cursor: pointer;
 }
 
+@media (max-width: 1024px) {
+
+    header nav {
+        padding: 2vw;
+    }
+
+    header nav div.logo {
+        padding: 3.25%;
+    }
+
+    .content-wrapper {
+        margin-top: -2vw;
+    }
+
+    .flipped>.text {
+        right: 0;
+    }
+    
+    .regular>.text {
+        left: 0;
+    }
+
+    .text-box {
+        width: 32vw;
+        padding: 1rem;
+    }
+}
+
+@media (min-width: 426px) and (max-width: 768px) {
+
+    html {
+        font-size: 45%;
+    }
+
+    main {
+        position: relative;
+        top: 3vw;
+    }
+
+    header nav {
+        padding: 2.5vw;
+    }
+
+    header nav div.logo {
+        padding: 3.75%;
+    }
+
+    .video-container {
+        padding: 2vw 3.6vw;
+    }
+
+    .content-wrapper {
+        padding: 0 3rem;
+    }
+
+    .content-wrapper,
+    #colaSection {
+        margin-top: 4vw;
+    }
+
+    footer {
+        margin-top: 7vw;
+    }
+}
+
+@media (max-width: 425px) {
+    html {
+        font-size: 30%;
+    }
+
+    header nav {
+        padding: 3.6vw;
+    }
+
+    header nav div.logo {
+        padding: 4.75%;
+    }
+
+    main {
+        position: relative;
+        top: 6vw;
+    }
+
+    p {
+        font-size: 1.8rem;
+    }
+
+    .video-ratio-16-9 {
+        padding-bottom: 43.75%;
+    }
+
+    .responsive-video {
+        width: 75%;
+    }
+
+    .content-wrapper {
+        flex-direction: column-reverse;
+        align-items: normal;
+    }
+
+    .content-wrapper,
+    #colaSection {
+        margin-top: 6vw;
+    }
+
+    .flipped>.text {
+        right: 0vw;
+    }
+    
+    .regular>.text {
+        left: 0vw;
+    }
+
+    .text-box {
+        width: 35vw;
+    }
+
+    footer {
+        margin-top: 7vw;
+    }
+    
+}

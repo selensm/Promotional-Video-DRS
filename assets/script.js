@@ -159,8 +159,8 @@ const hotspots = [
         markOut: 18.1,
         sizeX: 5,
         sizeY: 5,
-        posX: 50,
-        posY: 38,
+        posX: 40,
+        posY: 20,
         ui: {
             type: "box",
             image: "",
